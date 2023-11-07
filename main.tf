@@ -39,7 +39,7 @@ provider   "azurerm"   {
      name   =   "ipconfig1" 
      subnet_id   =   azurerm_subnet.frontendsubnet.id 
      private_ip_address_allocation   =   "Dynamic" 
-     public_ip_address_id   =   azurerm_public_ip.myvm 1 publicip.id 
+     public_ip_address_id   =   azurerm_public_ip.myvm1publicip.id 
    } 
  } 
 
@@ -47,7 +47,7 @@ provider   "azurerm"   {
    name                    =   "myvm1"   
    location                =   "northeurope" 
    resource_group_name     =   azurerm_resource_group.rg.name 
-   network_interface_ids   =   [ azurerm_network_interface.myvm 1 nic.id ] 
+   network_interface_ids   =   [ azurerm_network_interface.myvm1nic.id ] 
    size                    =   "Standard_B1s" 
    admin_username          =   "adminuser" 
    admin_password          =   "Password123!" 
